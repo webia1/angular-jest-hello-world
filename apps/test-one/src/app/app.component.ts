@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'test-one';
+  title: string;
+
+  constructor() {
+    this.title = this.capitalize('test-one');
+  }
+
+  capitalize(str: string) {
+    return [...str].map((s, i) => (i ? s : s.toUpperCase())).join('');
+  }
+
+  capitalize2(str: string) {
+    const result = [...str].map((s, i) => (i ? s : s.toUpperCase())).join('');
+
+    if (str === 'Hallo') {
+      return false;
+    } else {
+      return result;
+    }
+  }
 }
+
+// hallo -> Hallo
