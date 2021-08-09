@@ -30,10 +30,10 @@ describe('AppComponent', () => {
   });
 });
 
-it(`capitalize2 should be tested`, () => {
+it(`should return false if Hallo otherwise capitalize`, () => {
   const fixture = TestBed.createComponent(AppComponent);
   const app = fixture.componentInstance;
 
-  expect(app.capitalize2('hallo')).toEqual('Hallo');
-  expect(app.capitalize2('Hallo')).toEqual(false);
+  expect(app.capitalizeIfNotHelloElseReturnFalse('hallo')).toEqual('Hallo');
+  expect(app.capitalizeIfNotHelloElseReturnFalse('Hallo')).toEqual(false);
 });

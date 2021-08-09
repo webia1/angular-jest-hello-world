@@ -16,7 +16,7 @@ export class AppComponent {
     return [...str].map((s, i) => (i ? s : s.toUpperCase())).join('');
   }
 
-  capitalize2(str: string) {
+  capitalizeIfNotHelloElseReturnFalse(str: string) {
     const result = [...str].map((s, i) => (i ? s : s.toUpperCase())).join('');
 
     if (str === 'Hallo') {
